@@ -6,11 +6,11 @@ import EditTODO from "./EditTODO.jsx";
 
 
 
-function TODOform ({addTodo, editTodo, editTask, Addtodos, deleteTodo})  {
-  
+function TODOform ({ addTodo, editTodo, editTask, Addtodos, deleteTodo})  {
   
   const [value, setValue] = useState("")
-  
+
+
   const handleSubmit = e =>
   {
     e.preventDefault();
@@ -18,7 +18,7 @@ function TODOform ({addTodo, editTodo, editTask, Addtodos, deleteTodo})  {
     setValue("")
   }
 
-
+  
   
   return (
     <>
@@ -29,22 +29,21 @@ function TODOform ({addTodo, editTodo, editTask, Addtodos, deleteTodo})  {
         </div>
         <form onSubmit={handleSubmit} className="flex justify-center mb-8">
           <input
-            className="outline-none border-2 w-2/4 placeholder-white border-purple-600 bg-transparent"
+            className="outline-none border-2 w-2/4 placeholder-white border-purple-600 rounded-l-lg  p-2 bg-transparent"
             placeholder="Feladat"
             onChange={(e) => setValue(e.target.value)}
             value={value}
           />
-          <button className="bg-purple-600 p-2 font-bold">Feljegyez</button>
+          <button className="bg-purple-600 p-2 font-bold rounded-r-lg" >Feljegyez</button>
         </form>
         <div className="flex flex-col items-center justify-center">
             {Addtodos.map((todo, index) => (
               todo.isEditing ? (
-                  <EditTODO Addtodos={Addtodos} editTodo={editTask} task={todo}/>
+                <EditTODO Addtodos={Addtodos} key={index} editTodo={editTask} task={todo}/>
               )
               :
               (
-                <TODO task={todo} key={index} deleteTodo={deleteTodo} editTodo={editTodo}/>
-              )
+                <TODO task={todo}  key={index} deleteTodo={deleteTodo} editTodo={editTodo}/>              )
           ))}
         </div>
       </div>

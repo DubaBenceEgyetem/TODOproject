@@ -31,9 +31,6 @@ function EditTODO ({editTodo, task})  {
           />
           <button className="bg-purple-600 p-2 font-bold">Frissít</button>
         </form>
-        <div className="flex flex-col items-center justify-center">
-          
-        </div>
       </div>
      
     </>

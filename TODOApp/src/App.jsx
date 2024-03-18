@@ -26,11 +26,11 @@ function App() {
     setTodos(todos.map(todo => todo.id  === id ? {...todo, task, isEditing: !todo.isEditing} : todo))
   }
   
-
+  
   return (
     <>
     <div className='flex h-sreen items-center justify-center flex-col'>
-      <TODOform addTodo={addTodo} Addtodos={todos} editTask={editTask} editTodo={editTodo} deleteTodo={deleteTodo}/>
+      <TODOform addTodo={addTodo}   Addtodos={todos} editTask={editTask} editTodo={editTodo} deleteTodo={deleteTodo}/>
     </div>
     </>
   )
