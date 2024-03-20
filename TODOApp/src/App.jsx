@@ -4,14 +4,18 @@ import './App.css'
 import {v4 as uuidv4} from 'uuid'
 uuidv4()
 
+
 function App() {  
   const [todos, setTodos] = useState([])
+  
+
 
   const addTodo = todo =>
   {
-      setTodos([...todos, {id: uuidv4(), task: todo, completed: false, isEditing: false}])
-      console.log(todos)
-  }
+        (!todo) ? '' : setTodos([...todos, {id: uuidv4(), task: todo, completed: false, isEditing: false}])
+
+    }
+      
  
   const deleteTodo = id =>
   {
