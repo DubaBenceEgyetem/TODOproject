@@ -24,12 +24,12 @@ function EditTODO ({editTodo, task})  {
       <div className="bg-purple-900 text-white flex flex-col rounded-lg w-3/5">
         <form onSubmit={handleSubmit} className="flex justify-center mb-8">
           <input
-            className="outline-none border-2 w-2/4 placeholder-white border-purple-600 bg-transparent"
+            className="outline-none border-2 w-2/4 placeholder-white rounded-l-lg p-2 border-purple-600 bg-transparent"
             placeholder="Módosított"
             onChange={(e) => setValue(e.target.value)}
             value={value}
           />
-          <button className="bg-purple-600 p-2 font-bold">Frissít</button>
+          <button className="bg-purple-600 p-2 font-bold rounded-r-lg">Frissít</button>
         </form>
       </div>
      

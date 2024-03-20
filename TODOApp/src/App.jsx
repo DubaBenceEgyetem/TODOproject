@@ -29,9 +29,12 @@ function App() {
   
   return (
     <>
-    <div className='flex h-sreen items-center justify-center flex-col'>
-      <TODOform addTodo={addTodo}   Addtodos={todos} editTask={editTask} editTodo={editTodo} deleteTodo={deleteTodo}/>
-    </div>
+      
+                <div className='flex h-sreen items-center justify-center flex-col'>
+            <TODOform addTodo={addTodo} Addtodos={todos} editTask={editTask} editTodo={editTodo} deleteTodo={deleteTodo}/>
+          </div>
+  
+  
     </>
   )
 }
