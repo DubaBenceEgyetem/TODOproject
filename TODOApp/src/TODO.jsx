@@ -30,7 +30,7 @@ function TODO({ task, deleteTodo, editTodo }) {
         onClick={handleClick}
       />
       <p
-        className={`text-[10px] md:text-xl lg:text-3xl font-bold ${
+        className={`line-clamp-5 md:text-xl lg:text-3xl font-bold ${
           padding
             ? "text-gray-300 ease-in-out duration-300 px-2 line-through"
             : "ease-in-out duration-300"

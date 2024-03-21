@@ -16,7 +16,7 @@ function TODOform({ addTodo, editTodo, editTask, Addtodos, deleteTodo }) {
 
   return (
     <>
-      <div className="bg-purple-900 text-white flex flex-col rounded-lg w-auto sm:w-3/5 mt-8">
+      <div className="bg-gradient-to-b shadow-2xl from-purple-700 to-purple-900 text-white flex flex-col rounded-lg w-auto sm:w-3/5 mt-8">
         <div className="flex justify-center items-center">
           <FontAwesomeIcon className="sm:size-7" icon={faClock} spin />
           <h1 className="sm:text-4xl roboto text-2xl font-bold p-2 sm:p-5 ">
@@ -29,7 +29,7 @@ function TODOform({ addTodo, editTodo, editTask, Addtodos, deleteTodo }) {
             placeholder="Feladat"
             onChange={(e) => setValue(e.target.value)}
             value={value}
-            maxLength={20}
+            maxLength={17}
           />
           <button className="bg-purple-600 p-2 font-bold rounded-r-lg">
             Feljegyez
